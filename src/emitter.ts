@@ -142,6 +142,7 @@ export const ContentIndex: QuartzEmitterPlugin<Partial<Options>> = (opts) => {
       const text = data.text as string | undefined;
       if (options.includeEmptyFiles || (text && text !== "")) {
         const frontmatter = (data.frontmatter as Record<string, unknown> | undefined) ?? {};
+        console.log("DATA FRONTMATTER:", data.frontmatter)
         const isEncrypted = data.encrypted === true;
         linkIndex.set(slug, {
           slug,
