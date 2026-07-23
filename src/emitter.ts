@@ -27,6 +27,7 @@ export type ContentDetails = {
   richContent?: string;
   date?: Date;
   description?: string;
+  order?: number;
 };
 
 interface Options {
