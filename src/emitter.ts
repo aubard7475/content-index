@@ -157,7 +157,7 @@ export const ContentIndex: QuartzEmitterPlugin<Partial<Options>> = (opts) => {
               : undefined,
           date: date,
           description: (data.description as string | undefined) ?? "",
-          order: Number(frontmatter.order ?? data.order) || undefined,
+          order: Number(frontmatter.order ?? data.order ?? 0),
         });
       }
     }
